@@ -1,4 +1,4 @@
-# e-commerce
+# e-commerce-client
 
 ![shops](screenshot-shops.jpg)
 ![shop](screenshot-shop.jpg)
