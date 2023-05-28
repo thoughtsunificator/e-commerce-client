@@ -28,7 +28,7 @@ class ProductPage extends React.Component {
         this.setState({
             loading: true,
         })     
-        fetch(`/api/products?id=${this.props.match.params.product_id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/products?id=${this.props.match.params.product_id}`)
         .then(res => res.json())
         .then(res => {
              this.setState({
@@ -50,15 +50,15 @@ class ProductPage extends React.Component {
         // cart.push(product)
         //  // sauvegarde les modifications
         // localStorage.setItem("cart", JSON.stringify(cart))
-        // fetch(`/api/cart_items`, {
+        // fetch(`${process.env.REACT_APP_API_URL}/cart_items`, {
 		// 	method: 'POST',
 		// 	headers: {
 		// 		'Content-Type': 'application/json'
 		// 	},
 		// 	body: JSON.stringify({
-        //         cart:"/api/carts/2",
+        //         cart:"${process.env.REACT_APP_API_URL}/carts/2",
         //         quantity:1,
-        //         product:`/api/products/${productId}`})
+        //         product:`${process.env.REACT_APP_API_URL}/products/${productId}`})
         // })
     }
 

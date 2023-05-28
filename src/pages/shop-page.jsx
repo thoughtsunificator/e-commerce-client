@@ -21,8 +21,8 @@ class ShopPage extends React.Component {
         this.setState({ loading: true })
         const fetchText = url => fetch(url).then(r => r.json()); // 1
         const /*2*/[shop, resShopItems] = /*3*/ await Promise.all([
-            fetchText(`/api/shops/${this.props.match.params.shop_id}`),
-            fetchText(`/api/shop_items?shop=${this.props.match.params.shop_id}`)
+            fetchText(`${process.env.REACT_APP_API_URL}api/shops/${this.props.match.params.shop_id}`),
+            fetchText(`${process.env.REACT_APP_API_URL}/shop_items?shop=${this.props.match.params.shop_id}`)
         ]);
         this.setState({ loading: false, shop, shopItems: resShopItems["hydra:member"]});
     }

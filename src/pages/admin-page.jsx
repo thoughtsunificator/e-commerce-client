@@ -30,7 +30,7 @@ import UsersIcon from '@material-ui/icons/Group';
 
 import * as UsersGuesser from '../components/users-guesser';
 
-const entrypoint = "/api";
+
 const fetchHydra = (url, options = {}) => baseFetchHydra(url, {
 		...options,
 		headers: new Headers({'Authorization': `Bearer ${localStorage.getItem('token')}`}),
@@ -57,7 +57,7 @@ const apiDocumentationParser = entrypoint => parseHydraDocumentation(entrypoint,
 				},
 		);
 
-const dataProvider = baseDataProvider(entrypoint, fetchHydra, apiDocumentationParser);
+const dataProvider = baseDataProvider(process.env.REACT_APP_API_URL, fetchHydra, apiDocumentationParser);
 
 export class AdminPage extends React.Component {
 	render() {
@@ -69,7 +69,7 @@ export class AdminPage extends React.Component {
 				loginPage={false}
 				apiDocumentationParser={ apiDocumentationParser }
 				dataProvider={ dataProvider }
-				entrypoint={ entrypoint }
+				entrypoint={ process.env.REACT_APP_API_URL }
 			>
 				<ResourceGuesser name="carts" 
 					icon={ShoppingCart} 

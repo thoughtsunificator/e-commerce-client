@@ -13,7 +13,7 @@ function Content(props) {
 	const { dispatch } = globalState;
 	useEffect(() => {
 		dispatch({ type: "loadingCategories", history: props.history })
-		fetch(`/api/categories`)
+		fetch(`${process.env.REACT_APP_API_URL}/categories`)
 			.then(res => res.json())
 			.then(res => {
 				dispatch({ type: "categoriesLoaded", categories: res["hydra:member"] })

@@ -18,7 +18,7 @@ function Content(props) {
 	const { dispatch } = globalState;
 	useEffect(() => {
 		dispatch({ type: "loadingShops", history: props.history, category_id: props.category_id })
-		fetch(`/api/shops?category=${props.category_id}`)
+		fetch(`${process.env.REACT_APP_API_URL}/shops?category=${props.category_id}`)
 			.then(res => res.json())
 			.then(res => {
 				dispatch({ type: "shopsLoaded", shops: res["hydra:member"] })

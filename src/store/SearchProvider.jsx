@@ -22,7 +22,7 @@ export default class SearchProvider extends Component {
         clearTimeout(this.state.timeout)
         this.setState({
             timeout: setTimeout(() => {
-                fetch(`/api/products?name=${query}`)
+                fetch(`${process.env.REACT_APP_API_URL}/products?name=${query}`)
                     .then(res => res.json())
                     .then(res => {
                         this.setState({
