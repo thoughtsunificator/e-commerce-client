@@ -7,10 +7,6 @@ class SearchResult extends Component {
 
     static contextType = SearchContext
 
-    constructor(props) {
-        super(props)
-    }
-
     addCart(product) {
         this.props.dispatch({
             type: "ADD_PRODUCT",

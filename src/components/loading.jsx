@@ -6,13 +6,13 @@ export default class Loading extends React.Component {
         return (
             <>
             <div className="about">
-                <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
+                <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" rel="noopener noreferrer" target="_blank">
                     <span class="icon"></span>
                 </a>
-                <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
+                <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" rel="noopener noreferrer" target="_blank">
                     <span class="icon"></span>
                 </a>
-                <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
+                <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" rel="noopener noreferrer" target="_blank">
                     <span class="icon"></span>
                 </a>
                 <a class="bg_links logo"></a>
