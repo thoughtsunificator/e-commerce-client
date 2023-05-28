@@ -10,6 +10,7 @@ import PivotSphere from '../3d/pivot-sphere-planets'
 import Controls from '../3d/controls'
 
 import { store, GalaxyProvider } from '../store/GalaxyProvider';
+import Background from '../images/space.jpg';
 
 extend({ OrbitControls, UnrealBloomPass, EffectComposer, RenderPass })
 
@@ -43,7 +44,7 @@ export default function (props) {
 	return (
 		<Canvas
 			onCreated={({ camera }) => camera.lookAt(0, 0, 0)}
-			style={{ position: "absolute", top: 0, backgroundImage: 'url(/img/space.jpg)' }}
+			style={{ position: "absolute", top: 0, backgroundImage: `url(${Background})` }}
 			camera={{ position: [-1000, 2000, 5000], fov: 50, near: 100, far: 5000 }}
 			resize={{ scroll: false }}
 		>

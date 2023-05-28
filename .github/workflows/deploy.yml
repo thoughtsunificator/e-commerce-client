@@ -17,7 +17,12 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: NODE_OPTIONS=--openssl-legacy-provider REACT_APP_PUBLIC_URL=/e-commerce-client PUBLIC_URL=/e-commerce-client CI=false npm run build
+        run: NODE_OPTIONS=--openssl-legacy-provider REACT_APP_ENABLE_REACT_HASH_ROUTER=$REACT_APP_ENABLE_REACT_HASH_ROUTER REACT_APP_PUBLIC_URL=$REACT_APP_PUBLIC_URL REACT_APP_API_URL=$REACT_APP_API_URL PUBLIC_URL=$PUBLIC_URL CI=false npm run build
+        env:
+          REACT_APP_PUBLIC_URL: ${{ vars.REACT_APP_PUBLIC_URL }}
+          REACT_APP_API_URL: ${{ vars.REACT_APP_API_URL }}
+          REACT_APP_ENABLE_REACT_HASH_ROUTER: ${{ vars.REACT_APP_ENABLE_REACT_HASH_ROUTER }}
+          PUBLIC_URL: ${{ vars.PUBLIC_URL }} 
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop

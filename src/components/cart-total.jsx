@@ -3,6 +3,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 
+import IconCreditCardMaestro from "../images/SVG/credit-card-maestro.svg"
+import IconCreditCardMaster from "../images/SVG/credit-card-master.svg"
+import IconCreditCardAmerican from "../images/SVG/credit-card-american-express.svg"
+import IconCreditCardVisa from "../images/SVG/credit-card-visa.svg"
+import IconCreditCardPaypal from "../images/SVG/credit-card-paypal.svg"
+
 class CartTotal extends React.Component {
     render() {
         let total = this.props.shopItems.map(item => item.price * item.quantity).reduce((accumulator, currentValue) => (accumulator + currentValue))
@@ -13,11 +19,11 @@ class CartTotal extends React.Component {
                 <h3>Total à payer : {total} &euro;</h3>
                 <Link to= '/checkout'><button className="payment">Payment</button></Link>
                 <div id="credit-cards">
-                    <img src="/SVG/credit-card-maestro.svg" alt="credit-card-maestro" style={{ width: '40px' }} className="credit-card"></img>
-                    <img src="/SVG/credit-card-master.svg" alt="credit-card-master" style={{ width: '40px' }} className="credit-card"></img>
-                    <img src="/SVG/credit-card-american-express.svg" alt="credit-card-american-express" style={{ width: '50px' }} className="credit-card"></img>
-                    <img src="/SVG/credit-card-visa.svg" alt="credit-card-visa" style={{ width: '60px' }} className="credit-card"></img>
-                    <img src="/SVG/credit-card-paypal.svg" alt="credit-card-paypal" style={{ width: '70px' }} className="credit-card"></img>
+                    <img src={IconCreditCardMaestro} alt="credit-card-maestro" style={{ width: '40px' }} className="credit-card"></img>
+                    <img src={IconCreditCardMaster} alt="credit-card-master" style={{ width: '40px' }} className="credit-card"></img>
+                    <img src={IconCreditCardAmerican} alt="credit-card-american-express" style={{ width: '50px' }} className="credit-card"></img>
+                    <img src={IconCreditCardVisa} alt="credit-card-visa" style={{ width: '60px' }} className="credit-card"></img>
+                    <img src={IconCreditCardPaypal} alt="credit-card-paypal" style={{ width: '70px' }} className="credit-card"></img>
                 </div>
             </div>
         );

@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import Datasort from 'react-data-sort'
 
+import IconBasket from "../images/SVG/basket.svg"
+
 class ShopPage extends React.Component {
 
     constructor(props) {
@@ -21,7 +23,7 @@ class ShopPage extends React.Component {
         this.setState({ loading: true })
         const fetchText = url => fetch(url).then(r => r.json()); // 1
         const /*2*/[shop, resShopItems] = /*3*/ await Promise.all([
-            fetchText(`${process.env.REACT_APP_API_URL}api/shops/${this.props.match.params.shop_id}`),
+            fetchText(`${process.env.REACT_APP_API_URL}/shops/${this.props.match.params.shop_id}`),
             fetchText(`${process.env.REACT_APP_API_URL}/shop_items?shop=${this.props.match.params.shop_id}`)
         ]);
         this.setState({ loading: false, shop, shopItems: resShopItems["hydra:member"]});
@@ -167,7 +169,7 @@ function Content({ data, addCart }) {
                 <h2><Link to={`/product/${product.id}`}>{product.name}</Link></h2>
                 <p>{product.description}</p>
                 <h3>{product.price} &euro;</h3>
-                <button className="addToCart" onClick={() => addCart(product)}><img src="/SVG/basket.svg" style={{width: 15, height: 15}} alt={product.name} />Ajouter au panier</button>
+                <button className="addToCart" onClick={() => addCart(product)}><img src={IconBasket} style={{width: 15, height: 15}} alt={product.name} />Ajouter au panier</button>
             </div>
             ))}
         </section>

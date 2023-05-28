@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import { Dom } from "react-three-fiber";
+import ImageFlare from "../images/flare.png"
 
 import * as THREE from "three";
 
@@ -9,7 +10,7 @@ export default function SolarSystem(props) {
   const globalState = useContext(store);
   const { dispatch, state } = globalState;
   const ref = useRef()
-  const texture = new THREE.TextureLoader().load('/img/flare.png');
+  const texture = new THREE.TextureLoader().load(ImageFlare);
 
   const handleClick = (event) => {
     if(typeof event.preventDefault !== "undefined") {

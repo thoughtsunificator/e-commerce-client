@@ -4,6 +4,12 @@ import {clearAuth} from '../actions/auth';
 import {Link} from 'react-router-dom';
 import  Search from './search';
 
+import IconBasket from "../images/SVG/basket.svg"
+import IconDashboard from "../images/SVG/dashboard.svg"
+import IconUser from "../images/SVG/user.svg"
+import IconSettings from "../images/SVG/settings.svg"
+import IconLogout from "../images/SVG/logout.svg"
+
 export class HeaderBar extends React.Component {
 
 	logOut() {
@@ -18,20 +24,20 @@ export class HeaderBar extends React.Component {
 				<Link to="/"><h1 id="logo">UNIVERSHOP</h1></Link>
 				<Search />
 				<ul>
-					<li><Link to="/cart"><img src="/SVG/basket.svg" className="icon" alt="#" /><small>{/* this.props.cart.filter((item, index, self) => {
+					<li><Link to="/cart"><img src={IconBasket} className="icon" alt="#" /><small>{/* this.props.cart.filter((item, index, self) => {
 							let findIndex = self.findIndex(itemB => item.id === itemB.id)
 							return findIndex === index
 						}) */this.props.cart.length}</small></Link><span>Panier</span></li>
 					{this.props.currentUser === null ?
-							<li><Link to="/login"><img src="/SVG/user.svg" className="icon" alt="#" /></Link><span>Login</span></li>
+							<li><Link to="/login"><img src={IconUser} className="icon" alt="#" /></Link><span>Login</span></li>
 					: [
 						this.props.currentUser.roles.includes("ROLE_ADMIN") && (
-							<li><a href="/admin" target="_blank"><img src="/SVG/settings.svg" className="icon" alt="#" /></a><span>Admin</span></li>
+							<li><a href="/admin" target="_blank"><img src={IconSettings} className="icon" alt="#" /></a><span>Admin</span></li>
 
 						),
 						<>
-							<li><Link to="/dashboard"><img src="/SVG/dashboard.svg" className="icon" alt="#" /></Link><span>Dashboard</span></li>
-							<li onClick={() => this.logOut()}><img src="/SVG/logout.svg" className="icon" id="logout" alt="#" /><span>Logout</span></li>
+							<li><Link to="/dashboard"><img src={IconDashboard} className="icon" alt="#" /></Link><span>Dashboard</span></li>
+							<li onClick={() => this.logOut()}><img src={IconLogout} className="icon" id="logout" alt="#" /><span>Logout</span></li>
 						</>
 					]
 					}

@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import IconMinusSolid from "../images/SVG/minus-solid.svg"
+import IconPlusSolid from "../images/SVG/plus-solid.svg"
 
 class CartItem extends React.Component {
 
@@ -10,14 +12,14 @@ class CartItem extends React.Component {
                 <div style={{width: 100,textAlign: 'center'}}>
                     <img src='https://fakeimg.pl/100x100/282828/F2F4F3' alt={this.props.product.name} style={{borderRadius: 15}} />
                     <div className="itemsQuantity">
-                        <img src="/SVG/minus-solid.svg" onClick={() => {
+                        <img src={IconMinusSolid} onClick={() => {
                             this.props.dispatch({
                                 type: "DELETE_PRODUCT",
                                 product: this.props.product
                             })
                         }} className="icon minus" alt='#'/>
                         <p>{this.props.product.quantity}</p>
-                        <img src="/SVG/plus-solid.svg" onClick={() => {
+                        <img src={IconPlusSolid} onClick={() => {
                         this.props.dispatch({
                             type: "ADD_PRODUCT",
                             product: this.props.product

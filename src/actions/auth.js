@@ -45,7 +45,7 @@ const storeAuthInfo = (token, refreshToken, dispatch) => {
 export const login = (email, password) => dispatch => {
 	dispatch(authRequest());
 	return (
-		fetch(`/auth/login`, {
+		fetch(`${process.env.REACT_APP_API_URL}/login_check`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
