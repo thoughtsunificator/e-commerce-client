@@ -2,6 +2,7 @@
 	"name": "e-commerce-client",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "",
 	"dependencies": {
 		"@api-platform/admin": "^1.0.2",
 		"@material-ui/icons": "^4.5.1",
