@@ -1,22 +1,38 @@
 {
   "files": {
     "main.css": "/e-commerce-client/static/css/main.17b8bafe.chunk.css",
-    "main.js": "/e-commerce-client/static/js/main.bd6308ea.chunk.js",
-    "main.js.map": "/e-commerce-client/static/js/main.bd6308ea.chunk.js.map",
+    "main.js": "/e-commerce-client/static/js/main.a46cd444.chunk.js",
+    "main.js.map": "/e-commerce-client/static/js/main.a46cd444.chunk.js.map",
     "runtime-main.js": "/e-commerce-client/static/js/runtime-main.5ed655c9.js",
     "runtime-main.js.map": "/e-commerce-client/static/js/runtime-main.5ed655c9.js.map",
-    "static/js/2.7d3f8454.chunk.js": "/e-commerce-client/static/js/2.7d3f8454.chunk.js",
-    "static/js/2.7d3f8454.chunk.js.map": "/e-commerce-client/static/js/2.7d3f8454.chunk.js.map",
+    "static/js/2.81c80214.chunk.js": "/e-commerce-client/static/js/2.81c80214.chunk.js",
+    "static/js/2.81c80214.chunk.js.map": "/e-commerce-client/static/js/2.81c80214.chunk.js.map",
     "index.html": "/e-commerce-client/index.html",
-    "precache-manifest.c0b8c206363cd7b2fc121334a7a615d3.js": "/e-commerce-client/precache-manifest.c0b8c206363cd7b2fc121334a7a615d3.js",
+    "precache-manifest.db44e91781ec90f9d2ee59069696c67a.js": "/e-commerce-client/precache-manifest.db44e91781ec90f9d2ee59069696c67a.js",
     "service-worker.js": "/e-commerce-client/service-worker.js",
     "static/css/main.17b8bafe.chunk.css.map": "/e-commerce-client/static/css/main.17b8bafe.chunk.css.map",
-    "static/js/2.7d3f8454.chunk.js.LICENSE.txt": "/e-commerce-client/static/js/2.7d3f8454.chunk.js.LICENSE.txt"
+    "static/js/2.81c80214.chunk.js.LICENSE.txt": "/e-commerce-client/static/js/2.81c80214.chunk.js.LICENSE.txt",
+    "static/media/2k_sun.jpg": "/e-commerce-client/static/media/2k_sun.7ce3a845.jpg",
+    "static/media/basket.svg": "/e-commerce-client/static/media/basket.8303a225.svg",
+    "static/media/credit-card-american-express.svg": "/e-commerce-client/static/media/credit-card-american-express.08e3d22b.svg",
+    "static/media/credit-card-maestro.svg": "/e-commerce-client/static/media/credit-card-maestro.a716727b.svg",
+    "static/media/credit-card-master.svg": "/e-commerce-client/static/media/credit-card-master.0bd37246.svg",
+    "static/media/credit-card-paypal.svg": "/e-commerce-client/static/media/credit-card-paypal.e2df43a7.svg",
+    "static/media/credit-card-visa.svg": "/e-commerce-client/static/media/credit-card-visa.866a7d96.svg",
+    "static/media/dashboard.svg": "/e-commerce-client/static/media/dashboard.1d07900f.svg",
+    "static/media/flare.png": "/e-commerce-client/static/media/flare.ac85f706.png",
+    "static/media/galaxy2.png": "/e-commerce-client/static/media/galaxy2.69477cb8.png",
+    "static/media/logout.svg": "/e-commerce-client/static/media/logout.43fb8e78.svg",
+    "static/media/minus-solid.svg": "/e-commerce-client/static/media/minus-solid.f5ffbe1a.svg",
+    "static/media/plus-solid.svg": "/e-commerce-client/static/media/plus-solid.46b960ee.svg",
+    "static/media/settings.svg": "/e-commerce-client/static/media/settings.198db764.svg",
+    "static/media/space.jpg": "/e-commerce-client/static/media/space.9d3600d7.jpg",
+    "static/media/user.svg": "/e-commerce-client/static/media/user.51c48aa1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5ed655c9.js",
-    "static/js/2.7d3f8454.chunk.js",
+    "static/js/2.81c80214.chunk.js",
     "static/css/main.17b8bafe.chunk.css",
-    "static/js/main.bd6308ea.chunk.js"
+    "static/js/main.a46cd444.chunk.js"
   ]
 }
