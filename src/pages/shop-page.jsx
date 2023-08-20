@@ -76,16 +76,16 @@ class ShopPage extends React.Component {
                         paginate
                         render={({ data, pages }) => {
                             return (
-                                <div>
+                                <div style={{ padding: "25px", display: "grid", gridGap: "20px" }}>
+                                    <h2>
+                                        {this.state.shop.name}
+                                    </h2>
                                     <Links
                                         setSortBy={this.setSortBy}
                                         sortBy={sortBy}
                                         direction={direction}
                                         toggleDirection={this.toggleDirection}
                                     />
-                                    <h2>
-                                        {this.state.shop.name}
-                                    </h2>
                                     <Content data={data} addCart={this.addCart.bind(this)} />
                                     <Flex style={{ justifyContent: "space-between" }}>
                                         <GoToPage goToPage={this.goToPage} pages={pages} />
@@ -142,7 +142,7 @@ function Links({ setSortBy, sortBy, direction, toggleDirection }) {
         );
     });
     return (
-        <div style={{display: "grid", gridGap: "5px", gridAutoflow: "column"}}>
+        <div style={{display: "flex", gridGap: "15px"}}>
             <div>Sort by</div>
              {items}
         </div>
@@ -162,9 +162,10 @@ function ToggleLink({ children, active, onClick }) {
 
 function Content({ data, addCart }) {
     return (
-        <section id="productList">
-            {data.map(({ product }) => (
-            <div key={product.id} class="containerProductList">
+        <div className="products" style={{"display": "grid", gridTemplateColumns: "repeat(4, auto)", gridGap: "20px"}}>
+            {data.map(({ product, id }) => (
+            
+            <div key={id} className="product" style={{ "background": "#F2F4F3",  borderRadius: "15px",  "padding": "25px 0",  "height": "450px", "border": "9px solid #F2F4F3", "display": "grid", gridTemplateRows: "auto auto auto auto"  }}>
                 <img src='https://fakeimg.pl/100x100/282828/F2F4F3' style={{width: 100, height: 100}} alt={product.name} />
                 <h2><Link to={`/product/${product.id}`}>{product.name}</Link></h2>
                 <p>{product.description}</p>
@@ -172,7 +173,7 @@ function Content({ data, addCart }) {
                 <button className="addToCart" onClick={() => addCart(product)}><img src={IconBasket} style={{width: 15, height: 15}} alt={product.name} />Ajouter au panier</button>
             </div>
             ))}
-        </section>
+        </div>
     );
 }
 

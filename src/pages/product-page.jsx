@@ -65,17 +65,19 @@ class ProductPage extends React.Component {
     render() {
         if(this.state.loading === false) {
             const Products = this.state.productdetail.map(product => (
-                <div key={product.id}>
-                <h2>{product.name}</h2>
-                <h4>{product.description}</h4>
-                <h4>{product.price}</h4>
-                <h4>{product.images}</h4>
-                <h4>{console.log(product.images)}</h4>
-                <button className="addToCart" onClick={() => this.addCart(product)}>Ajouter au panier</button>
+                <div key={product.id} className="product" style={{ "background": "#F2F4F3",  "border-radius": "15px",  "padding": "25px 0",  "height": "450px", "border": "9px solid #F2F4F3", "display": "grid", "grid-template-rows": "auto auto auto auto"  }}>
+                    <h2>{product.name}</h2>
+                    <h4>{product.description}</h4>
+                    <h4>{product.price} &euro;</h4>
+                    <h4>{product.images}</h4>
+                    <img style={{ marginRight: 15, marginLeft: 5, borderRadius: 15 }} src={product.images.pop()} alt="" />
+                    <button className="addToCart" onClick={() => this.addCart(product)}>Ajouter au panier</button>
                 </div>
             ))
             return <>
-            {Products}
+            <div class="products" style={{"display": "grid", "grid-template-columns": "repeat(4, auto)", "padding": "25px", "grid-gap": "20px"}}>
+                {Products}
+            </div>
             </>
             ;
         } else {
